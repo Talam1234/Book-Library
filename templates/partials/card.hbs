@@ -1,0 +1,23 @@
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <script id="timsal"   type="text/x-handlebars-template">
+    for(var i=0;i<timsalbook.length();i++)
+    {
+    console.log("we are inside log")
+    {{#each user}}
+      {{this.bookname}}
+      <div class="col">
+        <div class="card h-100">
+          <img src={{this.url}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{this.bookname}}</h5>
+            <h5 class="card-title">{{this.writer}}</h5>
+            <p class="card-text"> {{this.discription}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+      }
+  </script>
+  {{!-- <script src="../../public/js/main.js"></script> --}}
+</div>

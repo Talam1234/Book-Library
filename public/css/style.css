@@ -1,0 +1,13 @@
+.container-fluid {
+    background-color: red;
+    height: 700px;
+    margin: 0px;
+  }
+  .col-md {
+    border: 2px solid white;
+    margin: 209px 250px;
+  }
+  #emailHelp
+  {
+    color: black;
+  }
