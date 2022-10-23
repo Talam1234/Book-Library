@@ -103,7 +103,7 @@ app.get("",async(req,res)=>{
     res.render('index',{user:timsalbook})
     // {user:timsalbook}
     // console.log(timsalbook)
-    console.log(timsalbook[0].bookname);
+    // console.log(timsalbook[0].bookname);
 })
 
 // ,{user:bookname},{user:writer},{user:discription},{user:url}

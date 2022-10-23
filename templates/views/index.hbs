@@ -16,9 +16,21 @@
   {{> navbar}}
   {{> header}}
   <div id="books" class="row container-fluid">
-      {{> card}}
+      {{#each user}}
+      {{!-- {{this.bookname}} --}}
+      <div class="col">
+        <div class="card h-10">
+          <img src={{this.url}} class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{this.bookname}}</h5>
+            <h5 class="card-title">{{this.writer}}</h5>
+            <p class="card-text"> {{this.discription}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
   </div>
-  {{user}}
+  {{!-- {{user}} --}}
   <h1>this is my homepage. so we have to work on our homepage</h1>
   <a href="./about">about</a>
   <a href="./weather">weather</a>
