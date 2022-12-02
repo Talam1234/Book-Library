@@ -11,16 +11,18 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+  <link rel="stylesheet" href="css/styleindex.css">
 </head>
 <body>
   {{> navbar}}
   {{> header}}
-  <div id="books" class="row container-fluid">
+  <h1>OUR COLLECTION</h1>
+  <div id="books" class="row container">
       {{#each user}}
       {{!-- {{this.bookname}} --}}
       <div class="col">
         <div class="card h-10">
-          <img src={{this.url}} class="card-img-top" alt="...">
+          <img src={{this.url}} class="card-img-top w-100" alt="..."  width="100px" height="300">
           <div class="card-body">
             <h5 class="card-title">{{this.bookname}}</h5>
             <h5 class="card-title">{{this.writer}}</h5>

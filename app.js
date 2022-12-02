@@ -86,15 +86,15 @@ app.post("/Admin",async (req,res)=>{
     //     const user = await loginmodel.findOne({username:req.body.Email});
     //   res.json(user.username);
         await bookmodeldb.save();
-        res.send(req.body.url);
+        // res.send(req.body.url);
         // const registeredmodel = await loginmodeldb.save();
-        // res.status(201).render("index");
+        res.status(201).render("index");
         // console.log(req.body.Email);
         // console.log(req.body.Password);
         // res.send(req.body.Email);
         // res.send(req.body.Password);
     } catch (error) {
-        res.status(400).send(error); 
+        res.status(400).send(error);
     }
 })
 
@@ -108,30 +108,15 @@ app.get("",async(req,res)=>{
 
 // ,{user:bookname},{user:writer},{user:discription},{user:url}
 
-// app.get("",async(req,res)=>{
-//     axios.get("http://localhost:3000/")
-//     .then(function(responce){
-//         console.log(responce.data)
-//         res.render('index',{user:responce.data})
-//     })
-//     .catch((err)=>{
-//         res.send(err)
-//     })
-// })
-
 app.get("/about",(req,res)=>{
+    
     res.render('about')
 })
 
-app.get("/Admin",(req,res)=>{
-    res.render('Admin')
+app.get("/Admin",async(req,res)=>{
+    const timsalbook=await bookmodel.find()
+    res.render('Admin',{user:timsalbook})
 })
-
-// axios.get("localhost:3000/Admin")
-// .then(function(res){
-//     console.log(res.data)
-//     res.render('Admin')
-// })
 
 app.get("/login",(req,res)=>{
     res.render('login')
